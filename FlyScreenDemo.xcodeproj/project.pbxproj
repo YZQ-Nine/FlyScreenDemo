@@ -13,9 +13,12 @@
 		56B13BD81ECC2DE200815B0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B13BD61ECC2DE200815B0A /* Main.storyboard */; };
 		56B13BDA1ECC2DE200815B0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56B13BD91ECC2DE200815B0A /* Assets.xcassets */; };
 		56B13BDD1ECC2DE200815B0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56B13BDB1ECC2DE200815B0A /* LaunchScreen.storyboard */; };
+		56B13BE91ECC311200815B0A /* FlyScreenManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 56B13BE81ECC311200815B0A /* FlyScreenManager.m */; };
+		F52CC5A5EC64CC8F05042D7C /* libPods-FlyScreenDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCD5753BADC058BF78BDE185 /* libPods-FlyScreenDemo.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11161AC100B5BC7D4B0AC434 /* Pods-FlyScreenDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyScreenDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FlyScreenDemo/Pods-FlyScreenDemo.release.xcconfig"; sourceTree = "<group>"; };
 		56B13BCA1ECC2DE000815B0A /* FlyScreenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlyScreenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56B13BCE1ECC2DE100815B0A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		56B13BD01ECC2DE100815B0A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +29,11 @@
 		56B13BD91ECC2DE200815B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56B13BDC1ECC2DE200815B0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56B13BDE1ECC2DE200815B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56B13BE71ECC311200815B0A /* FlyScreenManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlyScreenManager.h; sourceTree = "<group>"; };
+		56B13BE81ECC311200815B0A /* FlyScreenManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlyScreenManager.m; sourceTree = "<group>"; };
+		56B13BEA1ECC311D00815B0A /* Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		AD357376E7217E022594F921 /* Pods-FlyScreenDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FlyScreenDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FlyScreenDemo/Pods-FlyScreenDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		BCD5753BADC058BF78BDE185 /* libPods-FlyScreenDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FlyScreenDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F52CC5A5EC64CC8F05042D7C /* libPods-FlyScreenDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +53,8 @@
 			children = (
 				56B13BCC1ECC2DE000815B0A /* FlyScreenDemo */,
 				56B13BCB1ECC2DE000815B0A /* Products */,
+				F26A60623451D645524E6A4D /* Pods */,
+				F432C92F5158B1E213E55139 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +69,13 @@
 		56B13BCC1ECC2DE000815B0A /* FlyScreenDemo */ = {
 			isa = PBXGroup;
 			children = (
+				56B13BE61ECC30F900815B0A /* Manager */,
+				56B13BE51ECC30BE00815B0A /* Others */,
 				56B13BD01ECC2DE100815B0A /* AppDelegate.h */,
 				56B13BD11ECC2DE100815B0A /* AppDelegate.m */,
 				56B13BD31ECC2DE100815B0A /* ViewController.h */,
 				56B13BD41ECC2DE100815B0A /* ViewController.m */,
-				56B13BD61ECC2DE200815B0A /* Main.storyboard */,
-				56B13BD91ECC2DE200815B0A /* Assets.xcassets */,
-				56B13BDB1ECC2DE200815B0A /* LaunchScreen.storyboard */,
-				56B13BDE1ECC2DE200815B0A /* Info.plist */,
+				56B13BEA1ECC311D00815B0A /* Header.h */,
 				56B13BCD1ECC2DE000815B0A /* Supporting Files */,
 			);
 			path = FlyScreenDemo;
@@ -79,6 +89,43 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		56B13BE51ECC30BE00815B0A /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				56B13BD61ECC2DE200815B0A /* Main.storyboard */,
+				56B13BD91ECC2DE200815B0A /* Assets.xcassets */,
+				56B13BDB1ECC2DE200815B0A /* LaunchScreen.storyboard */,
+				56B13BDE1ECC2DE200815B0A /* Info.plist */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		56B13BE61ECC30F900815B0A /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				56B13BE71ECC311200815B0A /* FlyScreenManager.h */,
+				56B13BE81ECC311200815B0A /* FlyScreenManager.m */,
+			);
+			name = Manager;
+			sourceTree = "<group>";
+		};
+		F26A60623451D645524E6A4D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AD357376E7217E022594F921 /* Pods-FlyScreenDemo.debug.xcconfig */,
+				11161AC100B5BC7D4B0AC434 /* Pods-FlyScreenDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F432C92F5158B1E213E55139 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BCD5753BADC058BF78BDE185 /* libPods-FlyScreenDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56B13BE11ECC2DE200815B0A /* Build configuration list for PBXNativeTarget "FlyScreenDemo" */;
 			buildPhases = (
+				D9D04DFBABF6B7A24D96FAB2 /* [CP] Check Pods Manifest.lock */,
 				56B13BC61ECC2DE000815B0A /* Sources */,
 				56B13BC71ECC2DE000815B0A /* Frameworks */,
 				56B13BC81ECC2DE000815B0A /* Resources */,
+				BF5835809E66BC7A10B0A1B7 /* [CP] Embed Pods Frameworks */,
+				5CEE277DDDC00BA2799A6C4C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -111,7 +161,7 @@
 					56B13BC91ECC2DE000815B0A = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = Y3N9MZ2AHY;
-						ProvisioningStyle = Automatic;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -146,6 +196,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5CEE277DDDC00BA2799A6C4C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyScreenDemo/Pods-FlyScreenDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BF5835809E66BC7A10B0A1B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FlyScreenDemo/Pods-FlyScreenDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9D04DFBABF6B7A24D96FAB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		56B13BC61ECC2DE000815B0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -154,6 +252,7 @@
 				56B13BD51ECC2DE100815B0A /* ViewController.m in Sources */,
 				56B13BD21ECC2DE100815B0A /* AppDelegate.m in Sources */,
 				56B13BCF1ECC2DE100815B0A /* main.m in Sources */,
+				56B13BE91ECC311200815B0A /* FlyScreenManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,25 +368,33 @@
 		};
 		56B13BE21ECC2DE200815B0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD357376E7217E022594F921 /* Pods-FlyScreenDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y3N9MZ2AHY;
 				INFOPLIST_FILE = FlyScreenDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pico.FlyScreenDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a5f1f20f-3781-4375-a04b-1c6efd501077";
+				PROVISIONING_PROFILE_SPECIFIER = wide_pico;
 			};
 			name = Debug;
 		};
 		56B13BE31ECC2DE200815B0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11161AC100B5BC7D4B0AC434 /* Pods-FlyScreenDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y3N9MZ2AHY;
 				INFOPLIST_FILE = FlyScreenDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pico.FlyScreenDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a5f1f20f-3781-4375-a04b-1c6efd501077";
+				PROVISIONING_PROFILE_SPECIFIER = wide_pico;
 			};
 			name = Release;
 		};
@@ -310,6 +417,7 @@
 				56B13BE31ECC2DE200815B0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
